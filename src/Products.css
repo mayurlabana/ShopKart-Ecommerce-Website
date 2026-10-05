@@ -1,0 +1,320 @@
+.products-page {
+  min-height: 100vh;
+  padding: 60px 7%;
+  background: #f8f8f8;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.products-header p {
+  color: #e63946;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.products-header h1 {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+.products-header span {
+  color: #777;
+}
+
+/* Filters */
+
+.filters {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+
+  display: flex;
+  gap: 15px;
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.filters input,
+.filters select {
+  flex: 1;
+
+  padding: 13px 15px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: white;
+
+  font-size: 14px;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #e63946;
+}
+
+/* Products Grid */
+
+.products-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.product-item {
+  background: white;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  transition: 0.3s;
+}
+
+.product-item:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+
+.product-img {
+  height: 260px;
+
+  position: relative;
+
+  background: #f3f3f3;
+
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.4s;
+}
+
+.product-item:hover .product-img img {
+  transform: scale(1.05);
+}
+
+/* Heart */
+
+.heart {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Details */
+
+.product-details {
+  padding: 20px;
+}
+
+.product-category {
+  color: #e63946;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  text-transform: uppercase;
+}
+
+.product-details h3 {
+  font-size: 18px;
+
+  margin: 8px 0;
+}
+
+.rating {
+  color: #e6a400;
+
+  font-size: 14px;
+
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 22px;
+
+  font-weight: bold;
+
+  margin-bottom: 15px;
+}
+
+.add-cart {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #111;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.add-cart:hover {
+  background: #e63946;
+}
+
+/* No Products */
+
+.no-products {
+  text-align: center;
+
+  padding: 80px 20px;
+}
+
+.no-products h2 {
+  margin-bottom: 10px;
+}
+
+.no-products p {
+  color: #777;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .products-page {
+    padding: 40px 20px;
+  }
+
+  .products-header h1 {
+    font-size: 35px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+}  
+
+/* =========================
+   TEXT VISIBILITY FIX
+========================= */
+
+.products-page {
+  color: #111111;
+}
+
+.products-header p {
+  color: #e63946;
+}
+
+.products-header h1 {
+  color: #111111 !important;
+  font-size: 45px;
+  font-weight: 800;
+  opacity: 1;
+}
+
+.products-header span {
+  color: #555555 !important;
+  opacity: 1;
+}
+
+/* Search box */
+
+.filters input {
+  color: #222222 !important;
+  background: #ffffff;
+}
+
+.filters input::placeholder {
+  color: #777777 !important;
+  opacity: 1;
+}
+
+/* Dropdown boxes */
+
+.filters select {
+  color: #222222 !important;
+  background-color: #ffffff !important;
+  opacity: 1;
+}
+
+.filters select option {
+  color: #222222 !important;
+  background-color: #ffffff;
+}
+
+/* Product text */
+
+.product-category {
+  color: #e63946 !important;
+}
+
+.product-details h3 {
+  color: #111111 !important;
+}
+
+.product-price {
+  color: #111111 !important;
+}
+
+.rating {
+  color: #d99a00 !important;
+}
